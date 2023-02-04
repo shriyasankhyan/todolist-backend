@@ -1,6 +1,7 @@
-from django.urls import path
-from .views import TaskCreateView
+from rest_framework import routers
+from .views import *
 
-urlpatterns = [
-    path('create/', TaskCreateView.as_view(), name='task-create'),
-]
+router=routers.DefaultRouter()
+router.register(r'api/todos',TodoViewSet,'todos')
+
+urlpatterns = router.urls

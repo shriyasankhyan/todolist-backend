@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'todo',
-        'USER': 'todo_admin',
+        'USER': 'todo',
         'PASSWORD': 'to_Do_12',
         'HOST':'localhost',
         'PORT':'3306',
