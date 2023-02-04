@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',  
     'account',
+    'todo_api',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,7 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'todo',
         'USER': 'todo_admin',
-        'PASSWORD': 'to_DO_12',
+        'PASSWORD': 'to_Do_12',
         'HOST':'localhost',
         'PORT':'3306',
     }
