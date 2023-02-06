@@ -1,8 +1,10 @@
 from rest_framework import serializers
 from account.models import User
+from django.forms import ValidationError
 from django.utils.encoding import smart_str, force_bytes, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
+from account.utils import Util
 
 
 class UserRegisterationSerializer(serializers.ModelSerializer):
@@ -70,9 +72,16 @@ class SendPasswordResetEmailSerializer(serializers.Serializer):
             print("Encoded uid: ", uid)
             token = PasswordResetTokenGenerator().make_token(user)
             print("Token: ", token)
-            link = 'http://localhost:3000/reset-password/' + uid + '/' + token
+            link = 'http://localhost:3000/api/user/reset/' + uid + '/' + token
             print("Password Reset Link: ", link)
+            body = 'Click Following Link to Reset Your Password '+link
             # send_mail 
+            data = {
+                'subject': 'Reset Your Password',
+                'email_body': body,
+                'to_email': user.email
+            }
+            Util.send_email(data)
             return attrs
         else:
             raise serializers.ValidationError("The email is not registered")
@@ -102,4 +111,25 @@ class UserPasswordResetSerializer(serializers.Serializer):
         except DjangoUnicodeDecodeError as identifier:
             PasswordResetTokenGenerator().check_token(user, token)
             raise serializers.ValidationError("The reset link is invalid")
+
+
+
+# class UserLogoutSerializer(serializers.Serializer):
+#     refresh = serializers.CharField()
+
+#     default_error_messages = {
+#         'bad_token': ('Token is expired or invalid')
+#     }
+
+#     def validate(self, attrs):
+#         self.token = attrs['refresh']
+#         return attrs
+
+#     def save(self, **kwargs):
+#         try:
+#             RefreshToken(self.token).blacklist()
+#         except TokenError:
+#             self.fail('bad_token')
+
+            
             

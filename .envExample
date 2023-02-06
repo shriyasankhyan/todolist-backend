@@ -1,0 +1,3 @@
+EMAIL_USER = 'example@gmail.com'
+EMAIL_PASSWORD = 'password_example'  # Enter App Password
+EMAIL_FROM = 'example@gmail.com'
