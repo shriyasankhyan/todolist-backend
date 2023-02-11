@@ -1,0 +1,103 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "todo_api endpoints",
+    "dateExported": "2023-02-11T14:44:11.526Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "193e2ef3-bb31-427e-9a0a-955612024b8c",
+            "colId": "5f2069d2-ec66-49e7-be8d-69f0b0e91241",
+            "containerId": "",
+            "name": "get task by id",
+            "url": "http://127.0.0.1:8000/api/todos/3/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-02-11T14:43:03.661Z",
+            "modified": "2023-02-11T14:43:03.661Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "494ba435-da68-45b7-b6b6-5262e12c03ae",
+            "colId": "5f2069d2-ec66-49e7-be8d-69f0b0e91241",
+            "containerId": "",
+            "name": "create tode",
+            "url": "http://127.0.0.1:8000/api/todos/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-02-11T14:43:16.484Z",
+            "modified": "2023-02-11T14:43:16.484Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"still checking\",\n  \"description\": \"final endpoint check\",\n  \"deadline\": \"2022-10-31T09:00:00.594Z\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "94804213-5624-4890-b9b1-06c5e5c45c41",
+            "colId": "5f2069d2-ec66-49e7-be8d-69f0b0e91241",
+            "containerId": "",
+            "name": "Get all the data",
+            "url": "http://127.0.0.1:8000/api/todos/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-02-11T14:43:27.074Z",
+            "modified": "2023-02-11T14:43:27.074Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "33124424-6401-4348-a411-b621cca7cca3",
+            "colId": "5f2069d2-ec66-49e7-be8d-69f0b0e91241",
+            "containerId": "",
+            "name": "dellete tasks",
+            "url": "http://127.0.0.1:8000/api/todos/4/",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-02-11T14:43:35.021Z",
+            "modified": "2023-02-11T14:43:35.021Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bb88471c-23cd-4b90-a5b0-749c62751d40",
+            "colId": "5f2069d2-ec66-49e7-be8d-69f0b0e91241",
+            "containerId": "",
+            "name": "Update task",
+            "url": "http://127.0.0.1:8000/api/todos/1/",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-02-11T14:43:42.495Z",
+            "modified": "2023-02-11T14:43:42.495Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"Another Bullshit\",\r\n    \"description\": \"Dont know why we are doing this\",\r\n    \"isComplete\": true,\r\n    \"deadline\": \"2023-02-17T23:08:00Z\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "224804e3-adac-489a-af36-64981972cf14",
+            "colId": "5f2069d2-ec66-49e7-be8d-69f0b0e91241",
+            "containerId": "",
+            "name": "dellete tasks",
+            "url": "http://127.0.0.1:8000/api/todos/4/",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-02-11T14:44:00.214Z",
+            "modified": "2023-02-11T14:44:00.214Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
