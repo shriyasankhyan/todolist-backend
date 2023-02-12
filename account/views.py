@@ -63,10 +63,17 @@ class AdminProfileView(APIView):
     renderer_classes = (UserRenderer,)
     permission_classes = (IsAuthenticated,)
     def get(self, request, format=None):
-        user = User.objects.all()
-        print(user)
-        serializer = UserProfileSerializer(user, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        admin = request.user
+        serializer = AdminProfileSerializer(admin)
+        is_admin = serializer.data.get('is_admin')
+        if(is_admin):
+            user = User.objects.all()
+            # print(user)
+            serializer = UserProfileSerializer(user, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            print('You are not admin'	)
+            return Response({'message': 'You are not admin'}, status=status.HTTP_401_UNAUTHORIZED)
 
 class UserChangePasswordView(APIView):
     renderer_classes = (UserRenderer,)
