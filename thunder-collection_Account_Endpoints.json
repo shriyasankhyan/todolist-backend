@@ -1,1 +1,157 @@
-{"client":"Thunder Client","collectionName":"Account_Endpoints","dateExported":"2023-02-06T18:45:50.880Z","version":"1.1","folders":[],"requests":[{"_id":"3405bcaf-89ea-467d-a17f-fa7ee0f88787","colId":"63d4aa64-cafb-4ac1-af98-ae34a128b2df","containerId":"","name":"Send Password Reset Email","url":"http://127.0.0.1:8000/api/user/send-reset-password-email/","method":"POST","sortNum":10000,"created":"2023-02-06T18:44:30.811Z","modified":"2023-02-06T18:44:30.811Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n  \"email\":\"20bma032@nith.ac.in\"\n}","form":[]},"tests":[]},{"_id":"1651a64d-6bde-4026-b610-145239b5ec52","colId":"63d4aa64-cafb-4ac1-af98-ae34a128b2df","containerId":"","name":"User Login","url":"http://127.0.0.1:8000/api/user/login/","method":"POST","sortNum":20000,"created":"2023-02-06T18:44:54.150Z","modified":"2023-02-06T18:44:54.150Z","headers":[{"name":"Accept","value":"application/json"},{"name":"User-Agent","value":"Thunder Client (https://www.thunderclient.com)","isDisabled":true}],"params":[],"body":{"type":"json","raw":"{\n  \"email\":\"20bma032@nith.ac.in\",\n  \"password\":\"123\"\n}","form":[]},"tests":[]},{"_id":"89de0084-aa6c-4ca5-950c-669b492371db","colId":"63d4aa64-cafb-4ac1-af98-ae34a128b2df","containerId":"","name":"User Registration","url":"http://127.0.0.1:8000/api/user/register/","method":"POST","sortNum":30000,"created":"2023-02-06T18:45:03.451Z","modified":"2023-02-06T18:45:03.451Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n    \"email\":\n      \"20032@nith.ac.in\"\n    ,\n    \"name\":\n      \"nshul\"\n    ,\n    \"tc\": \n      \"True\"\n    ,\n    \"password\": \n      \"cv\"\n    ,\n    \"password2\": \n      \"cv\"\n    \n  \n}","form":[]},"tests":[]},{"_id":"6982a82a-edd5-4225-9870-20d55dac82d6","colId":"63d4aa64-cafb-4ac1-af98-ae34a128b2df","containerId":"","name":"Reset User Password","url":"http://127.0.0.1:8000/api/user/password-reset-confirm/MTI/bj8265-9b6b4cd43b8b02ce792c8faf0bbd9eb4/","method":"POST","sortNum":40000,"created":"2023-02-06T18:45:12.713Z","modified":"2023-02-06T18:45:12.713Z","headers":[],"params":[],"body":{"type":"json","raw":"{\n   \"password\":\"123\"\n  , \"password2\":\"123\"\n}","form":[]},"tests":[]},{"_id":"48ec9a0e-4d38-48d0-9dc1-eaecd9234187","colId":"63d4aa64-cafb-4ac1-af98-ae34a128b2df","containerId":"","name":"Change User Password","url":"http://127.0.0.1:8000/api/user/changepassword/","method":"POST","sortNum":50000,"created":"2023-02-06T18:45:20.262Z","modified":"2023-02-06T18:45:20.262Z","headers":[{"name":"Authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1NzA4MTgxLCJpYXQiOjE2NzU3MDY5ODEsImp0aSI6Ijg0YjE0ZGU0ZjhkNzRiNGFiMjNjOGIyNjljZDdkNTk3IiwidXNlcl9pZCI6MTJ9.MjW1jj1Uc8UWEBw2cSo1hwWPr_GCjDL-ar2XkGVI43w"}],"params":[],"body":{"type":"json","raw":"{\n  \"password\":\"12\",\n  \"password2\":\"12\"\n}","form":[]},"tests":[]},{"_id":"e65228a1-9242-4146-ba68-74059fc1e886","colId":"63d4aa64-cafb-4ac1-af98-ae34a128b2df","containerId":"","name":"User Profile","url":"http://127.0.0.1:8000/api/user/profile/","method":"GET","sortNum":60000,"created":"2023-02-06T18:45:29.365Z","modified":"2023-02-06T18:45:29.365Z","headers":[{"name":"Authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1NzA4MTgxLCJpYXQiOjE2NzU3MDY5ODEsImp0aSI6Ijg0YjE0ZGU0ZjhkNzRiNGFiMjNjOGIyNjljZDdkNTk3IiwidXNlcl9pZCI6MTJ9.MjW1jj1Uc8UWEBw2cSo1hwWPr_GCjDL-ar2XkGVI43w"}],"params":[],"tests":[]}]}
+{
+    "client": "Thunder Client",
+    "collectionName": "Account_Endpoints",
+    "dateExported": "2023-02-12T11:17:27.720Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3405bcaf-89ea-467d-a17f-fa7ee0f88787",
+            "colId": "63d4aa64-cafb-4ac1-af98-ae34a128b2df",
+            "containerId": "",
+            "name": "Send Password Reset Email",
+            "url": "http://127.0.0.1:8000/api/user/send-reset-password-email/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-02-06T18:44:30.811Z",
+            "modified": "2023-02-06T18:44:30.811Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"20bma032@nith.ac.in\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1651a64d-6bde-4026-b610-145239b5ec52",
+            "colId": "63d4aa64-cafb-4ac1-af98-ae34a128b2df",
+            "containerId": "",
+            "name": "User Login",
+            "url": "http://127.0.0.1:8000/api/user/login/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-02-06T18:44:54.150Z",
+            "modified": "2023-02-06T18:44:54.150Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"20bma032@nith.ac.in\",\n  \"password\":\"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "89de0084-aa6c-4ca5-950c-669b492371db",
+            "colId": "63d4aa64-cafb-4ac1-af98-ae34a128b2df",
+            "containerId": "",
+            "name": "User Registration",
+            "url": "http://127.0.0.1:8000/api/user/register/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-02-06T18:45:03.451Z",
+            "modified": "2023-02-06T18:45:03.451Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"email\":\n      \"20032@nith.ac.in\"\n    ,\n    \"name\":\n      \"nshul\"\n    ,\n    \"tc\": \n      \"True\"\n    ,\n    \"password\": \n      \"cv\"\n    ,\n    \"password2\": \n      \"cv\"\n    \n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6982a82a-edd5-4225-9870-20d55dac82d6",
+            "colId": "63d4aa64-cafb-4ac1-af98-ae34a128b2df",
+            "containerId": "",
+            "name": "Reset User Password",
+            "url": "http://127.0.0.1:8000/api/user/password-reset-confirm/MTI/bj8265-9b6b4cd43b8b02ce792c8faf0bbd9eb4/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-02-06T18:45:12.713Z",
+            "modified": "2023-02-06T18:45:12.713Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"password\":\"123\"\n  , \"password2\":\"123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "48ec9a0e-4d38-48d0-9dc1-eaecd9234187",
+            "colId": "63d4aa64-cafb-4ac1-af98-ae34a128b2df",
+            "containerId": "",
+            "name": "Change User Password",
+            "url": "http://127.0.0.1:8000/api/user/changepassword/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-02-06T18:45:20.262Z",
+            "modified": "2023-02-06T18:45:20.262Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1NzA4MTgxLCJpYXQiOjE2NzU3MDY5ODEsImp0aSI6Ijg0YjE0ZGU0ZjhkNzRiNGFiMjNjOGIyNjljZDdkNTk3IiwidXNlcl9pZCI6MTJ9.MjW1jj1Uc8UWEBw2cSo1hwWPr_GCjDL-ar2XkGVI43w"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\":\"12\",\n  \"password2\":\"12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e65228a1-9242-4146-ba68-74059fc1e886",
+            "colId": "63d4aa64-cafb-4ac1-af98-ae34a128b2df",
+            "containerId": "",
+            "name": "User Profile",
+            "url": "http://127.0.0.1:8000/api/user/profile/",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-02-06T18:45:29.365Z",
+            "modified": "2023-02-06T18:45:29.365Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc1NzA4MTgxLCJpYXQiOjE2NzU3MDY5ODEsImp0aSI6Ijg0YjE0ZGU0ZjhkNzRiNGFiMjNjOGIyNjljZDdkNTk3IiwidXNlcl9pZCI6MTJ9.MjW1jj1Uc8UWEBw2cSo1hwWPr_GCjDL-ar2XkGVI43w"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fa826f6a-fa9b-45e1-9114-2c8d2063b083",
+            "colId": "63d4aa64-cafb-4ac1-af98-ae34a128b2df",
+            "containerId": "",
+            "name": "Admin-profile",
+            "url": "http://127.0.0.1:8000/api/user/admin-profile/",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-02-12T11:15:18.350Z",
+            "modified": "2023-02-12T11:15:18.350Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2MjAwNjAyLCJpYXQiOjE2NzYxOTk0MDIsImp0aSI6Ijk5ZmQ2ZDk1YzFmODQ3ODNhNDc4NGFjM2IxMjBkY2FjIiwidXNlcl9pZCI6MTZ9.Hgt1auWC9KM8A6f3Y7v1f5MTEjFu_uzyMLrr8pNhRqM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

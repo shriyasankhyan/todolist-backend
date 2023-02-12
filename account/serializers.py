@@ -131,5 +131,13 @@ class UserPasswordResetSerializer(serializers.Serializer):
 #         except TokenError:
 #             self.fail('bad_token')
 
+
+class AdminProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
+    
+
             
             
