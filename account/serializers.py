@@ -14,11 +14,13 @@ class UserRegisterationSerializer(serializers.ModelSerializer):
         fields = ('email', 'name', 'tc', 'password', 'password2')
         extra_kwargs = {'password': {'write_only': True}}
 
+    # to validate password
     def validate(self, data):
         if data['password'] != data['password2']:
             raise serializers.ValidationError("Passwords must match.")
         return data
 
+    #to create a new user
     def create(self, validated_data):
         user = User.objects.create_user(
             email=validated_data['email'],
@@ -29,13 +31,14 @@ class UserRegisterationSerializer(serializers.ModelSerializer):
         return user
 
 
+#serializing email and password
 class UserLoginSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(max_length=255, min_length=3)
     class Meta:
         model = User
         fields=['email', 'password']
 
-
+#deserializing data
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -43,11 +46,13 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 
 class UserChangePasswordSerializer(serializers.Serializer):
+    #deserializng the passwords
     password = serializers.CharField(max_length=255, style={'input_type':'password'}, write_only=True)
     password2 = serializers.CharField(max_length=255, style={'input_type':'password'}, write_only=True)
     class Meta:
         fields = ['password', 'password2']
         
+    #validating if both passwords are same and updating password
     def validate(self, attrs):
         password = attrs.get('password')
         password2 = attrs.get('password2')
@@ -132,6 +137,7 @@ class UserPasswordResetSerializer(serializers.Serializer):
 #             self.fail('bad_token')
 
 
+#serializing
 class AdminProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User

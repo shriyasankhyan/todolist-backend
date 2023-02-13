@@ -55,7 +55,7 @@ class TodoDetailApiView(APIView):
         serializer = TodoSerializer(todo_instance)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    # to updata a todo
+    # to update a todo
     def put(self, request, todo_id, *args, **kwargs):
         todo_instance = self.get_object(todo_id, request.user_id)
         if not todo_instance:
