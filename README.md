@@ -1,27 +1,28 @@
 # todolist-backend
 
-Prerequisites:
-  Python 3.6 or higher
-  Django 3.x
-  Django Rest Framework 3.x
+<h3>Prerequisites:</h3>
+  <ul>
+  <li> Python 3.6 or higher </li>
+  <li>Django 3.x</li>
+  <li>Django Rest Framework 3.x</li>
+  </ul>
+<h3>Installation</h3>
 
-Installation
-
-Clone the repository:
+<h6>Clone the repository:</h6>
 
 git clone https://github.com/[username]/django-rest-framework-project.git
 
-Create a virtual environment:
+<h6>Create a virtual environment:</h6>
 python -m venv env
 
-Activate the virtual environment:
+<h6>Activate the virtual environment:</h6>
 source env/bin/activate
 
-Install the required packages:
+<h6>Install the required packages:</h6>
 pip install -r requirements.txt
 
-Apply the migrations:
+<h6>Apply the migrations:</h6>
 python manage.py migrate
 
-Run the development server:
+<h6>Run the development server:</h6>
 python manage.py runserver
