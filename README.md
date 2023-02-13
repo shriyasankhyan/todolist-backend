@@ -8,21 +8,21 @@
   </ul>
 <h3>Installation</h3>
 
-<h6>Clone the repository:</h6>
+<h5>Clone the repository:</h5>
 
 git clone https://github.com/[username]/django-rest-framework-project.git
 
-<h6>Create a virtual environment:</h6>
+<h5>Create a virtual environment:</h5>
 python -m venv env
 
-<h6>Activate the virtual environment:</h6>
+<h5>Activate the virtual environment:</h5>
 source env/bin/activate
 
-<h6>Install the required packages:</h6>
+<h5>Install the required packages:</h5>
 pip install -r requirements.txt
 
-<h6>Apply the migrations:</h6>
+<h5>Apply the migrations:</h5>
 python manage.py migrate
 
-<h6>Run the development server:</h6>
+<h5>Run the development server:</h5>
 python manage.py runserver
