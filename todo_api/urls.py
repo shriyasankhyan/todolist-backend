@@ -10,6 +10,6 @@ from .views import (
 )
 
 urlpatterns = [
-    path('api/todos', TodoListApiView.as_view()),
+    path('api/todos/', TodoListApiView.as_view()),
     path('api/todos/<int:todo_id>/', TodoDetailApiView.as_view()),
 ]

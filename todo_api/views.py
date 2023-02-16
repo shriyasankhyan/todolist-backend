@@ -46,7 +46,7 @@ class TodoDetailApiView(APIView):
 
     # to get a specific todo
     def get(self, request, todo_id, *args, **kwargs):
-        todo_instance = self.get_object(todo_id, request.user_id)
+        todo_instance = self.get_object(todo_id, request.user.id)
         if not todo_instance:
             return Response(
                 {"res": "Object with todo id does not exist"},
@@ -57,17 +57,14 @@ class TodoDetailApiView(APIView):
 
     # to update a todo
     def put(self, request, todo_id, *args, **kwargs):
-        todo_instance = self.get_object(todo_id, request.user_id)
+        todo_instance = self.get_object(todo_id, request.user.id)
         if not todo_instance:
             return Response(
                 {"res":"Object with todo id does not exist"},
                 status=status.HTTP_400_BAD_REQUEST
             )
         data = {
-            'title': request.data.get('title'),
-            'description': request.data.get('description'),
             'isComplete': request.data.get('isComplete'),
-            'deadline': request.data.get('deadline'),
             'user': request.user.id
         }
         serializer = TodoSerializer(instance=todo_instance, data=data, partial=True)
@@ -78,7 +75,7 @@ class TodoDetailApiView(APIView):
 
     # to delete a todo
     def delete(self, request, todo_id, *args, **kwargs):
-        todo_instance = self.get_object(todo_id, request.user_id)
+        todo_instance = self.get_object(todo_id, request.user.id)
         if not todo_instance:
             return Response(
                 {"res": "Object with todo id does not exist"},
